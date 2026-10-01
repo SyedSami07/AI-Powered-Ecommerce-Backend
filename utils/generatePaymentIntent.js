@@ -8,7 +8,7 @@ export async function generatePaymentIntent(orderId, totalPrice) {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: totalPrice * 100,
       currency: "usd",
-    });
+    })
 
     await database.query(
       "INSERT INTO payments (order_id, payment_type, payment_status, payment_intent_id) VALUES ($1, $2, $3, $4) RETURNING *",
