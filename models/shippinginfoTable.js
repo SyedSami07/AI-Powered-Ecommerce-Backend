@@ -12,7 +12,7 @@ export async function createShippingInfoTable() {
          pincode VARCHAR(10) NOT NULL,
          phone VARCHAR(20) NOT NULL,
          FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE);`;
-    await database.query(query);
+    await database.query(query)
   } catch (error) {
     console.error("❌ Failed To Create Shipping Info Table.", error);
     process.exit(1);
