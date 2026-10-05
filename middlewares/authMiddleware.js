@@ -28,7 +28,7 @@ export const authorizedRoles = (...roles) => {
         )
       );
     }
-    next();
+    next()
   };
 };
 
