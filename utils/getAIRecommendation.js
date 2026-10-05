@@ -42,6 +42,6 @@ export async function getAIRecommendation(req, res, userPrompt, products) {
     }
     return { success: true, products: parsedProducts };
   } catch (error) {
-    res.status(500).json({ success: false, message: "Internal server error." });
+    res.status(500).json({ success: false, message: "Internal server error." })
   }
 }
