@@ -199,7 +199,7 @@ export const dashboardStats = catchAsyncErrors(async (req, res, next) => {
     [currentMonthStart]
   );
 
-  const newUsersThisMonth = parseInt(newUsersThisMonthQuery.rows[0].count) || 0;
+  const newUsersThisMonth = parseInt(newUsersThisMonthQuery.rows[0].count) || 0
 
   // FINAL RESPONSE
   res.status(200).json({
