@@ -29,7 +29,7 @@ export async function getAIRecommendation(req, res, userPrompt, products) {
     if (!cleanedText) {
       return res
         .status(500)
-        .json({ success: false, message: "AI response is empty or invalid." });
+        .json({ success: false, message: "AI response is empty or invalid." })
     }
 
     let parsedProducts;
