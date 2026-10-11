@@ -24,7 +24,7 @@ export async function getAIRecommendation(req, res, userPrompt, products) {
     const data = await response.json();
     const aiResponseText =
       data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
-    const cleanedText = aiResponseText.replace(/```json|```/g, ``).trim();
+    const cleanedText = aiResponseText.replace(/```json|```/g, ``).trim()
 
     if (!cleanedText) {
       return res
