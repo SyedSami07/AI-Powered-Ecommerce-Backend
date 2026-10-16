@@ -15,7 +15,7 @@ export async function generatePaymentIntent(orderId, totalPrice) {
       [orderId, "Online", "Pending", paymentIntent.client_secret]
     );
 
-    return { success: true, clientSecret: paymentIntent.client_secret };
+    return { success: true, clientSecret: paymentIntent.client_secret }
   } catch (error) {
     console.error("Payment Error:", error.message || error);
     return { success: false, message: "Payment Failed." };
