@@ -42,7 +42,7 @@ export const register = catchAsyncErrors(async (req, res, next) => {
 export const login = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    return next(new ErrorHandler("Please provide email and password.", 400));
+    return next(new ErrorHandler("Please provide email and password.", 400))
   }
   const user = await database.query(`SELECT * FROM users WHERE email = $1`, [
     email,
