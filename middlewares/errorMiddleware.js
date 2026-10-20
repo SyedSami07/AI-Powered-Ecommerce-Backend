@@ -25,7 +25,7 @@ export const errorMiddleware = (err, req, res, next) => {
   }
 
   if (err.name === "CastError") {
-    const message = `Invalid ${err.path}: ${err.value}`;
+    const message = `Invalid ${err.path}: ${err.value}`
     err = new ErrorHandler(message, 400);
   }
 
