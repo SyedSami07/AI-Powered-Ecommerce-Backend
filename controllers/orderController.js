@@ -290,7 +290,7 @@ export const deleteOrder = catchAsyncErrors(async (req, res, next) => {
     [orderId]
   );
   if (results.rows.length === 0) {
-    return next(new ErrorHandler("Invalid order ID.", 404));
+    return next(new ErrorHandler("Invalid order ID.", 404))
   }
 
   res.status(200).json({
