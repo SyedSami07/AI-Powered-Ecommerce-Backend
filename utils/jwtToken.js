@@ -18,5 +18,5 @@ export const sendToken = (user, statusCode, message, res) => {
       user,
       message,
       token,
-    });
+    })
 };
