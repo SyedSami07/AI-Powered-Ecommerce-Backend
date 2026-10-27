@@ -5,7 +5,7 @@ const database = new Client({
   user: "postgres",
   host: "localhost",
   database: "mern_ecommerce_store",
-  password: "1234",
+  password: "#",
   port: 5432,
 });
 
