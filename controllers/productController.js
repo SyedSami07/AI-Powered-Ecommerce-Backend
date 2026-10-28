@@ -104,7 +104,7 @@ export const fetchAllProducts = catchAsyncErrors(async (req, res, next) => {
     conditions.push(
       `(p.name ILIKE $${index} OR p.description ILIKE $${index})`
     );
-    values.push(`%${search}%`);
+    values.push(`%${search}%`)
     index++;
   }
 
