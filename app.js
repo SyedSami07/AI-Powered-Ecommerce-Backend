@@ -101,6 +101,6 @@ app.use("/api/v1/order", orderRouter);
 
 createTables();
 
-app.use(errorMiddleware);
+app.use(errorMiddleware)
 
 export default app;
