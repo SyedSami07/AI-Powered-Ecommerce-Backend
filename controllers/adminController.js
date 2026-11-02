@@ -188,7 +188,7 @@ export const dashboardStats = catchAsyncErrors(async (req, res, next) => {
   if (lastMonthRevenue > 0) {
     const growthRate =
       ((currentMonthSales - lastMonthRevenue) / lastMonthRevenue) * 100;
-    revenueGrowth = `${growthRate >= 0 ? "+" : ""}${growthRate.toFixed(2)}%`;
+    revenueGrowth = `${growthRate >= 0 ? "+" : ""}${growthRate.toFixed(2)}%`
   }
 
   // New Users This Month
